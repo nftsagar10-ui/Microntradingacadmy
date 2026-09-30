@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Micron Trading Academy</title>
+<style>
+:root{--gold:#d4af37;--bg:#070707;--card:#111;--text:#f5f5f5;--muted:#aaa}
+*{box-sizing:border-box;margin:0;padding:0} body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+nav{position:sticky;top:0;z-index:10;background:#080808ee;border-bottom:1px solid #292929;padding:16px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;letter-spacing:1px;color:var(--gold)} nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:14px}
+.hero{min-height:78vh;display:flex;align-items:center;padding:70px 8%;background:radial-gradient(circle at 80% 30%,#3b2c0870,transparent 35%),linear-gradient(135deg,#080808,#151515)}
+.hero h1{font-size:clamp(42px,7vw,78px);line-height:1.05;margin:15px 0}.gold{color:var(--gold)}
+.hero p{max-width:650px;color:#c8c8c8;font-size:18px}.btn{display:inline-block;margin-top:28px;padding:14px 24px;background:var(--gold);color:#050505;text-decoration:none;font-weight:800;border-radius:6px}
+section{padding:70px 8%;max-width:1200px;margin:auto} h2{font-size:36px;margin-bottom:12px}.sub{color:var(--muted);margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.card{background:var(--card);border:1px solid #282828;border-radius:12px;padding:24px}.card h3{color:var(--gold);margin-bottom:8px}
+.roadmap{border-left:2px solid var(--gold);padding-left:25px}.step{margin:25px 0}.step span{color:var(--gold);font-weight:bold}
+.cta{background:linear-gradient(135deg,#151515,#0a0a0a);border:1px solid #3a3117;border-radius:18px;text-align:center}
+form{max-width:600px;margin:25px auto 0;display:grid;gap:12px}input,textarea,select{padding:14px;background:#0d0d0d;border:1px solid #333;color:white;border-radius:6px}button{padding:14px;background:var(--gold);border:0;border-radius:6px;font-weight:bold;cursor:pointer}
+footer{padding:30px 8%;border-top:1px solid #222;color:#888;text-align:center;font-size:13px}
+@media(max-width:700px){nav{display:block}nav div:last-child{margin-top:10px}nav a{margin:0 12px 0 0}.hero{min-height:70vh;padding-top:50px}section{padding:55px 6%}h2{font-size:30px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">MICRON TRADING ACADEMY</div>
+  <div><a href="#about">About</a><a href="#course">Course</a><a href="#roadmap">Roadmap</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="hero">
+  <div>
+    <p class="gold"><b>TRADING EDUCATION • BEGINNER TO ADVANCED</b></p>
+    <h1>Learn Trading.<br><span class="gold">Understand the Market.</span></h1>
+    <p>Build your trading knowledge with structured education in Price Action, Smart Money Concepts, Market Structure and Risk Management.</p>
+    <a class="btn" href="#contact">ENROLL NOW</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Micron</h2>
+  <p class="sub">A structured learning platform for traders who want to understand the market—not just follow signals.</p>
+  <div class="grid">
+    <div class="card"><h3>Structured Learning</h3><p>Step-by-step concepts from fundamentals to advanced market analysis.</p></div>
+    <div class="card"><h3>Practical Analysis</h3><p>Learn how to read charts, market structure, liquidity and price behaviour.</p></div>
+    <div class="card"><h3>Risk First</h3><p>Understand risk management, position sizing and disciplined trading.</p></div>
+  </div>
+</section>
+
+<section id="course">
+  <h2>What You Will Learn</h2>
+  <p class="sub">Our curriculum is designed to build a strong foundation and progressively introduce advanced concepts.</p>
+  <div class="grid">
+    <div class="card"><h3>Trading Fundamentals</h3><p>Financial markets, charts, candles, trends and basic terminology.</p></div>
+    <div class="card"><h3>Market Structure</h3><p>BOS, CHOCH, highs/lows and structural mapping.</p></div>
+    <div class="card"><h3>Smart Money Concepts</h3><p>Liquidity, order blocks, inducement and institutional concepts.</p></div>
+    <div class="card"><h3>Fair Value Gap</h3><p>Understand imbalance and how FVGs are identified on charts.</p></div>
+    <div class="card"><h3>Price Action</h3><p>Read price behaviour and plan structured setups.</p></div>
+    <div class="card"><h3>Risk Management</h3><p>Risk-to-reward, position sizing and trading discipline.</p></div>
+  </div>
+</section>
+
+<section id="roadmap">
+  <h2>3-Month Roadmap</h2>
+  <div class="roadmap">
+    <div class="step"><span>MONTH 01</span><h3>Foundation</h3><p>Trading basics, market types, charts, candles, trends and price action.</p></div>
+    <div class="step"><span>MONTH 02</span><h3>Smart Money & Structure</h3><p>Market structure, BOS, CHOCH, liquidity, order blocks, FVG and inducement.</p></div>
+    <div class="step"><span>MONTH 03</span><h3>Advanced Application</h3><p>Setup planning, entries/exits, risk management, trap avoidance and chart analysis.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="cta">
+    <h2>Ready to Learn Trading?</h2>
+    <p class="sub">Start with knowledge. Build your process. Trade responsibly.</p>
+    <a class="btn" href="#contact">JOIN MICRON</a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Enroll / Contact</h2>
+  <p class="sub">Fill the form and we will contact you.</p>
+  <form onsubmit="sendWhatsApp(event)">
+    <input id="name" placeholder="Your Name" required>
+    <input id="phone" placeholder="Mobile Number" required>
+    <select id="course"><option>3 Month Trading Course</option></select>
+    <textarea id="msg" rows="4" placeholder="Your message"></textarea>
+    <button type="submit">SEND ENQUIRY ON WHATSAPP</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Micron Trading Academy • Educational purpose only. Trading involves market risk. No profit or return is guaranteed.
+</footer>
+
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value;
+ const phone=document.getElementById('phone').value;
+ const course=document.getElementById('course').value;
+ const msg=document.getElementById('msg').value;
+ const academyNumber="919999999999"; // Replace with your WhatsApp number
+ const text=`Hello Micron Trading Academy,%0AName: ${name}%0AMobile: ${phone}%0ACourse: ${course}%0AMessage: ${msg}`;
+ window.open(`https://wa.me/${academyNumber}?text=${text}`,'_blank');
+}
+</script>
+</body>
+</html>
